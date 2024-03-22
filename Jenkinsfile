@@ -9,12 +9,12 @@ pipeline {
     }
 
     stages {
-        stage('Clone') {
+        stage('Cloning') {
             steps {
                git 'https://github.com/ashokitschool/maven-web-app.git'
             }
         }
-        stage('Static Code Analysis'){
+        stage('Analysis of static code'){
           steps {
             bat "mvn pmd:pmd"
             bat "mvn findbugs:findbugs"
